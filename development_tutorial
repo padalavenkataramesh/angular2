@@ -1,0 +1,241 @@
+start day 1
+------------
+Angular not only for web development. 
+Js framework for developing application.
+Platform: for web, mobile etc.
+which is used for development, mobile base and serer 
+
+base.
+Productive spa development
+
+Goals: 
+	productive spa development.
+		for rubust/enteriprice apps.
+	performance
+	run anywhere js gets rendered/exuecuted
+	web component support
+	latest js standers suppor ie not only for 
+
+ecmascript 5alone, it supports ecmascript 6 ie 
+
+typescripts.
+
+Ecmascript 5(es5) -> classic javascript
+	supported by(virtually) all browsers.
+Es2015(es6) 
+	more features ( ex:modules, classes, etc)
+	Not supported by browers.
+		>>Transpilation( compile) to es5 is 
+
+needed
+Typescript - from microset, which is super set of es6.
+	Based on the js language
+	Superset of es2015
+	No browser support 
+		>>Transpilation needed.
+
+Dart
+	Not a js language
+	no browser support
+		>>Transpliation needed.
+
+
+
+Javascript: ( a collection of objects ( and /or logic)
+	
+	Usually, defined in its own file.
+
+Js module pattarns( just a few) 
+==============================	
+1)Classic pattern.
+------
+**iife - immediatly invokable function expression-> self 
+
+ananumous functon.
+
+var func1 = (function(){
+
+	var sum ="10";
+	// some code here
+})(); ----> classic pattern
+
+2) CommonJs Pattern.
+--------------
+//file1.js
+var func1 = function(){
+
+	var sum ="10";
+	// some code here
+}
+module.export  = func1;
+ 
+we can access that file.
+
+var mod = require('file1');
+mod.sum();
+
+3) AMD pattern - define pattern
+-----------
+
+define([], function(){
+
+		
+	// code.
+})
+
+4) Ts language/Pattern.
+-------------------
+es2015/ts
+objects in module can be exposed to public
+	using 'export'
+objects( of a module) can be obtaind ( and used)
+	using 'import'
+
+classic pattern - pure js -> all browsers supported
+rest of patern not supported because (define, require, 
+
+export, import etc keywords) not supported. so that 
+
+specicial libraries need to make these patterns ( and 
+
+keywords!) work. 
+	
+	Js modlue loaders
+
+		Ex: syste.js, webpack etc.
+
+	Transpilers
+
+		Ex: typescript, babel etc.
+
+			Angular Modules
+			---------------
+
+
+-Javscaript modules are completly different than angular 
+
+modlues
+ie Js, es6, Ts modules not atall same as angular2 
+
+modules.
+
+-Modules:couple of ui components, Metadata, etc. it is 
+
+wrapper around multiple compoment and multiple services 
+
+stick to modules. (Just a way of bringing various
+
+(related) parts of angular app into a single unit.)
+
+- typical angular 2 module structure.
+
+import { ngmodule} from '@angular/core';
+import ...;
+
+@NgModule({
+
+	...;
+});
+
+export class DemoModule{
+	...
+
+};
+
+  - A class ( could be marked with export ) 
+  - @NgModule decorator
+	>> 'decorates' (marks) class as "Angular module"
+	>> contains additional information
+
+(config/metadata etc)
+	. Mainly for angular compiler/framework.	
+  - Feature imports (from other modules)
+- An Angular app contains at least one module
+
+	Angular2 = Root Module + etc.
+	
+	- usueally called "root module"
+	- Also call "AppModule" ( general naming 
+
+convetion - class name)
+
+- An angular app can contain multiple (feature) modules
+	>usually pinned to "AppModule" 
+
+(directly/indirectly)
+	> Each modules is reponsible for a specific area/ 
+
+business/feature of an angular app.
+
+		Angular Component
+		-----------------
+
+ - Fundamental building-block of UI
+ - Component contains UI and related logic
+ 	Ajs2-> (template+class+metadata)
+		
+	| Tempalte(UI/view html) 
+	| Class ( logic supporting view, provides data 
+
+handles events.
+	| Metada( Addinal information to angular 
+
+framework.
+
+- Components can be nested
+	> forms a tree
+
+		App component
+			|
+1) Head component 2)body component 3)footer component
+1.1 logo component 2.1 Left panel   
+1.2 menu component 2.2 body panel components
+
+-Components need to be included in angular module in 
+
+order to make them work.
+	> Root module starts( or bootstraps) Root 
+
+component( typically)
+
+- Typical angular component structure:
+	> A class ( could be marked with "export" ) 
+	>> provides data to UI
+
+
+What do we need to dev angular 2 apps.
+
+- Angular js libraries/scripts
+	> based on feature usage
+	> dependenceies on other 3rd party js libraries
+- Tools/frameworks/libraries
+	> Editor
+	> Browser
+	> Node/NPM
+	> Web Server ( node based( lite) iis, web server 
+
+etc
+	> Transplier( compiler) [type script, babel etc]
+	> Angular CLI
+	> Js Module loader [System js, Rquire js, webpack 
+
+etc] - by defaule follows system.js
+	> Js task runner/bundling
+		>> Grunt, Gulp, webpack etc. - need to be 
+
+compile or need to be minimize.
+	> Unit Testing
+		> Karma, jsmine etc 
+	> linting & etc.- to display code in pretty look
+
+		Angular Bootstrapping
+		---------------------
+
+-Bootstrapping of app
+   > noting but 'booting' an app.
+	>> on a platform.
+  
+  -----------------------
+start day 2 end
+	
+
